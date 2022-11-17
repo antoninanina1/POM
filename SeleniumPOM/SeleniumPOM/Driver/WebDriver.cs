@@ -11,7 +11,7 @@ namespace SeleniumPOM.Driver
 
         public static void Initialize()
         {
-            Instance = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+            Instance = new ChromeDriver();
             Instance.Manage().Window.Maximize();
             Instance.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
             Instance.Navigate().GoToUrl("https://demosite.executeautomation.com");
